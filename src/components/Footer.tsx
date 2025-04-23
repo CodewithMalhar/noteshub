@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaExternalLinkAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 function Footer() {

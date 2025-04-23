@@ -1,13 +1,15 @@
 // SignupForm.tsx
-import React, { useState, useRef, useEffect } from "react";
+// import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { collection, doc, getDocs, setDoc } from "firebase/firestore";
+import {doc,  setDoc } from "firebase/firestore";
 import { db, auth } from "../config/firebase.config";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 // import './signinForm.css'
+import { useState } from "react";
+import { useEffect } from "react";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 const AdminSignupForm: React.FC = () => {
@@ -18,11 +20,11 @@ const AdminSignupForm: React.FC = () => {
   //     password: "",
   // });
 
-  const Errors = {
-    empty: "Please fill all fields.",
-    // "wrong": "Please fill all fields.",
-    invalid: "Email is used by someone else.",
-  };
+  // const Errors = {
+  //   empty: "Please fill all fields.",
+  //   // "wrong": "Please fill all fields.",
+  //   invalid: "Email is used by someone else.",
+  // };
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
   // email s username....
@@ -38,8 +40,8 @@ const AdminSignupForm: React.FC = () => {
 
   const handleSignUp = async () => {
     setLoading(true);
-    let validUser = [];
-    const email = username.trim();
+    // let validUser = [];
+    // const email = username.trim();
 
     username.trim();
     fname.trim();
@@ -82,7 +84,7 @@ const AdminSignupForm: React.FC = () => {
 
       console.log("all validation check done");
       try {
-        const users = collection(db, "admins");
+        // const users = collection(db, "admins");
         // const departmentNamesArray: any[] = [];
 
         // querySnapshot.forEach((doc) => {
@@ -111,7 +113,7 @@ const AdminSignupForm: React.FC = () => {
             // console.log(data);
             console.log("start data save");
             setDoc(docRef, data)
-              .then((userCreds) => {
+              .then(() => {
                 console.log("data save done");
                 // console.log(userCreds);
                 alert("Registration success");
@@ -143,9 +145,9 @@ const AdminSignupForm: React.FC = () => {
 
         // localStorage.setItem("user", newtoken);
         // localStorage.setItem("email", username);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
-        setInvalid(error.message);
+        setInvalid(error?.message);
         setTimeout(() => setInvalid(""), 3000);
         setLoading(false);
       }

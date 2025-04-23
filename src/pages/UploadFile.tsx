@@ -14,7 +14,7 @@ import { sem8State } from "../states/Sem8.state";
 // import { dynamicSem8State } from "../states/Sem8.state";
 import { storage } from "../config/firebase.config";
 import { ref, uploadBytes } from "firebase/storage";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ function UploadFile() {
   const btn = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
   const { user, loading } = useUser();
-  let sub = "cse";
+  // let sub = "cse";
 
   const [file, setFile] = useState<File | null>();
   const [subjects, setSubjects] = useState<string[]>(["No Semester Selected"]);

@@ -2,11 +2,11 @@ import "./NoresArea.css";
 
 import SemisterArea from "../components/SemisterArea";
 import { useUser } from "../context/UserContext";
-import styled from "styled-components";
+
 import { useNavigate } from "react-router-dom";
 
 function NotesArea() {
-  const { user, loading } = useUser();
+  const { user } = useUser();
   const queryParams = new URLSearchParams(location.search);
   let sub = queryParams.get("sub");
   // console.log(sub);

@@ -11,7 +11,7 @@ function Navbar() {
 
 function Navbar2() {
   const [modal, showModal] = useState(false);
-  const { user, loading } = useUser();
+  const { user } = useUser();
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
