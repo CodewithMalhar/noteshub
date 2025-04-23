@@ -1,0 +1,17 @@
+.link, .adm{
+    padding: 0px 0px;
+}
+
+.link:hover{
+    transition: all 0.4s ease-in-out;
+    border-bottom: 2px solid gray;
+}
+
+.navbar{
+
+    background-color: rgb(197, 219, 219);
+    opacity: 0.8;
+    z-index: 20;
+    box-shadow: 0 2px 20px black;
+}
+

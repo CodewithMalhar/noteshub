@@ -1,0 +1,43 @@
+.coolbg {
+    background-image: url("../images/wave2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+
+.content {
+    background-color: rgba(73, 192, 232, 0.267);
+}
+
+.sem {
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 25%;
+    font-size: medium;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #a09bbeac;
+    border: 2px solid #7469b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 640px) {
+    .sem {
+        width: 50px;
+        height: 40px;
+        border-radius: 25%;
+        margin: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1020px) {
+    .sem {
+        width: 75px;
+        height: 70px;
+    }
+}
